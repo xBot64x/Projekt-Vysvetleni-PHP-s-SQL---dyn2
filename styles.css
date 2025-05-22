@@ -1,0 +1,291 @@
+/* Základní styly */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: calc(100% - 250px);
+    margin: 0 auto;
+    margin-left: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* příklady */
+.example {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.example form {
+    margin-bottom: 10px;
+}
+
+.example form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px 5px 28px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.run {
+    background-image: url('images/play.svg');
+}
+
+.rerun {
+    background-image: url('images/refresh.svg');
+    float: right;
+
+}
+
+.example form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.example form input[type="text"] {
+    border: 1px solid #929eb9;
+    border-radius: 4px;
+    padding: 5px 10px;
+    height: 13px;
+    width: 140px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.example form input[type="number"] {
+    border: 1px solid #929eb9;
+    border-radius: 4px;
+    padding: 5px 3px 5px 10px;
+    height: 13px;
+    width: 140px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.example button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-image: url('images/copy.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #949494;
+    height: 30px;
+    min-width: 30px;
+    border: 1px solid #3f4247;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.example button:hover {
+    background-color: #bbc4cd;
+}
+
+/* kód */
+pre {
+    position: relative;
+    background-color: #282c34;
+    color: #cbd1dc;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.result {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+pre,
+.result {
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* nadpisy */
+.anchor,
+.anchor2 {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+}
+
+.anchor:hover,
+.anchor2:hover {
+    text-decoration: underline;
+}
+
+.anchor:hover::before,
+.anchor2:hover::before {
+    position: absolute;
+    content: "#";
+    color: #888;
+    font-weight: bold;
+}
+
+.anchor:hover::before {
+    right: 6px;
+    top: 4px;
+    font-size: 18px
+}
+
+.anchor2:hover::before {
+    right: 6px;
+    top: 22px;
+    font-size: 16px
+}
+
+.explanation {
+    margin-top: 10px;
+}
+
+/* boční panel */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    padding: 20px 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul ul a {
+    padding-left: 40px;
+}
+
+.sidebar-nav li {
+    margin: 5px 0;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 5px 15px;
+    margin: 4px 10px;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.sidebar-nav a.active {
+    background-color: #d0e3f6;
+    color: #007bff;
+}
+
+/* Mobilní burger menu */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1001;
+    background: #007bff;
+    opacity: 0.75;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #0056b3;
+    opacity: 1;
+}
+
+/* responsibilita */
+@media (max-width: 600px) {
+    body {
+        padding: 0px;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .container {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+}
