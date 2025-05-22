@@ -1,5 +1,6 @@
 # PHP a MySQL Tutoriál
 
+[Odkaz na stránku](https://app.opent2.com/it3a/knizef/dyn2/)
 Tento projekt je interaktivní webová stránka sloužící jako tutoriál pro výuku PHP a práce s MySQL databází. Stránka obsahuje praktické příklady, které lze přímo spouštět a testovat.
 
 ## 🚀 Funkce
