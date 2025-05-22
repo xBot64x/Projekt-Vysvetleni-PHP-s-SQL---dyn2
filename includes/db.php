@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "root";
+$username = "knizef";
+$password = "FTp123";
 $dbname = "knizef_dyn2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
